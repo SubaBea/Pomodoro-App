@@ -1,15 +1,19 @@
 # Pomodoro Tanulást Segítő Alkalmazás
+
 ## Projektlabor I. – Suba-Kiss Beáta – 2025
 
 ## Projekt leírása
 
-A Pomodoro tanulási technika egy fókusznövelő módszer, amely rövid, intenzív tanulási szakaszokra és rendszeres szünetekre bontja a tanulást. 25 perc tanulást 5 perc szünet követ, ez ismétlődik négyszer, majd következik egy hosszabb, 15 perces szünet. A módszer segít növelni a koncentrációt, és csökkenti a túlterheltséget.
+A Pomodoro tanulási technika egy fókusznövelő módszer, amely rövid, intenzív tanulási szakaszokra és rendszeres szünetekre bontja a tanulást. 25 perc tanulást 5 perc szünet követ, 
+ez négyszer ismétlődik, majd következik egy hosszabb, 15 perces szünet. A módszer segít növelni a koncentrációt, és csökkenti a túlterheltséget. (A beadott verzió tesztidőket használ 
+a gyorsabb kipróbálás érdekében - 1 perc tanulás, 5 másodperc szünet, 5 másodperc hosszú szünet-)
 
-Ez az alkalmazás egy **asztali Pomodoro időzítő**, amelyet felsős, leginkább 8. osztályos tanulók számára készítettem, hogy könnyebben be tudják osztani a tanulási idejüket, és visszajelzést kapjanak arról, melyik tantárgyra mennyi időt fordítottak.
+Ez az alkalmazás egy **asztali Pomodoro időzítő**, amelyet felsős, leginkább 8. osztályos tanulók számára készítettem, hogy könnyebben be tudják osztani a tanulási idejüket, és 
+visszajelzést kapjanak arról, melyik tantárgyra mennyi időt fordítottak.
 
 A nap végén (amikor végzett a tanulással) CSV fájlba exportálhatja a statisztikát, amely excel-ben is megnyitható. 
 
-A program teljes egészében **Python nyelven, TOGA GUI keretrendszerrel** készült.
+A program teljes egészében **Python nyelven, TOGA GUI keretrendszerrel** készült, amely a **BeeWare** keretrendszer része.
 
 ## A projekt célja
 
@@ -22,21 +26,22 @@ A program teljes egészében **Python nyelven, TOGA GUI keretrendszerrel** kész
 
 ## Az alkalmazás működése
 
-A program elindítása után a felhasználó:
+A program elindítása után:
 
  1. Tantárgy kiválasztása
 
-    A lenyíló menüből kiválasztható, hogy éppen melyik tantárgyból indul a tanulási egyperces blokk.
+    A lenyíló menüből kiválasztható, hogy éppen melyik tantárgyból indul az 1 perces tanulási blokk.
 
  2. Tanulási idő visszaszámlálása
 
-     - 1 perc tanulás (teszt mód)
-     - automatikusan követi 5 másodperc szünet
+     - start gomb megnyomása
+	 - **1 perc** tanulási (teszt mód) idő elindul
+     - **5 másodperc** szünet követi automatikusan
      - minden 4. blokk után hosszabb szünet indul
-     - a kijelző színe vált:
-        tanulás → fekete
-        rövid szünet → zöld
-        hosszú szünet → kék
+     - a kijelzőn a szöveg és a számláló színe vált:
+        **tanulás → fekete**
+        **rövid szünet → zöld**
+        **hosszú szünet → kék**
 
  3. Tanulási idő lejárása
  
@@ -54,16 +59,16 @@ A program elindítása után a felhasználó:
 
  5. Napi összesítés
 
-    A jobb oldali panelen a mai nap összesített tanulási ideje látható tantárgyanként.
+    A jobb oldali panelen az aktuális nap összesített tanulási ideje látható tantárgyanként.
 
-    Automatikusan frissül: minden tantárgyhoz tartozó mai tanulási idő
+    Automatikusan frissül: ahogy a tanulási idő lejár, automatikusan hozzáaadódik a tanult idő az adott tantárgyhoz.
 
  6. CSV export
 
     A „Statisztika mentése” gombra kattintva:
      - a napló összesített formában kerül kiírásra
-     - ha egy tantárgyból többször is tanult valaki, a program automatikusan összeadja
-     - ha a CSV meg van nyitva Excelben, a program udvarias hibaüzenetet jelenít meg
+     - ha egy tantárgyból többször is tanult a felhasználó, a program automatikusan összeadja
+     - ha a CSV meg van nyitva Excelben, a program udvarias hibaüzenetet jelenít meg, így tájékoztatva a felhasználót, hogy miért nem tudta elmenteni a statisztikát
 
  7. Súgó
 
@@ -94,7 +99,7 @@ A program elindítása után a felhasználó:
 
 ## Használt technológiák
 
- - Python 3.12+
+ - Python 3.13
  - Toga GUI (BeeWare projekt)
  - JSON fájlkezelés
  - CSV export UTF-8 kódolással
@@ -129,6 +134,8 @@ A program Windows / macOS / Linux rendszeren is működik.
 
 ## Tesztelési eredmények
 
+ - Windows 11 alatt stabil működés
+ - hibamentes indulás és kilépés
  - minden gomb megfelelően reagál
  - statisztika automatikusan frissül
  - a CSV fájl jól kezelhető Excelben
@@ -138,12 +145,8 @@ A program Windows / macOS / Linux rendszeren is működik.
 ## Személyes reflexió
 
  Ez a projekt sokat segített abban, hogy jobban megértsem a GUI-fejlesztés alapjait Pythonban, és valós alkalmazást készítsek gyakorlati funkciókkal (mentés, exportálás, időzítő).
- Különösen hasznos volt számomra a fájlkezelés, a komponensek együttműködése és a Toga keretrendszer megismerése.
+ Különösen hasznos volt számomra a fájlkezelés és a Toga keretrendszer megismerése.
 
 ## Összefoglalás
 
  A Pomodoro Tanulást Segítő App egy letisztult, könnyen használható asztali alkalmazás, amely támogatja a diákokat abban, hogy hatékonyabban osszák be a tanulási idejüket, és visszajelzést kapjanak a napi teljesítményükről.
- 
-
-
-
